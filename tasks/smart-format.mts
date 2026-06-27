@@ -61,9 +61,5 @@ if (existingFiles.length > 0) {
 }
 
 function quoteAll(files: string[]): string {
-  if (process.platform === 'win32') {
-    return files.join(' ')
-  }
-
   return files.map((f) => `'${f.replaceAll("'", "'\\''")}'`).join(' ')
 }
