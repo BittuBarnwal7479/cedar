@@ -112,7 +112,7 @@ function getExitCode(e: unknown): number | undefined {
   if (typeof e === 'object' && e !== null && 'exitCode' in e) {
     const exitCode = e.exitCode
 
-    if (typeof exitCode === 'number') {
+                if (typeof exitCode === 'number') {
       return exitCode
     }
   }
