@@ -103,7 +103,6 @@ export async function generateTypesEsm() {
   try {
     await runYarnScript('build:types')
   } catch (e) {
-    console.error('---- Error building ESM types ----')
     process.exitCode = getExitCode(e) ?? 1
     throw e
   }
